@@ -74,7 +74,7 @@ FLAVORS ?= output
 override BRANCH_NAME := pr/$(BRANCH_NAME)
 endif
 
-DOCKER_REGISTRY ?= "gitlab.itglobal.com:5050/itglobal/linux/k8s-minio-cluster"
+DOCKER_REGISTRY ?= rook
 REGISTRIES ?= $(DOCKER_REGISTRY)
 IMAGE_ARCHS := $(subst linux_,,$(filter linux_%,$(PLATFORMS)))
 IMAGE_PLATFORMS := $(subst _,/,$(subst $(SPACE),$(COMMA),$(filter linux_%,$(PLATFORMS))))

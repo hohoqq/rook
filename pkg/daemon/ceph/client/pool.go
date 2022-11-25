@@ -414,7 +414,7 @@ func createReplicatedPoolForApp(context *clusterd.Context, clusterInfo *ClusterI
 	checkFailureDomain := false
 
 	// The crush rule name is the same as the pool unless we have a stretch cluster.
-	crushRuleName := pool.Name
+	crushRuleName := "FixedCrushRule"
 	if clusterSpec.IsStretchCluster() {
 		// A stretch cluster enforces using the same crush rule for all pools.
 		// The stretch cluster rule is created initially by the operator when the stretch cluster is configured
